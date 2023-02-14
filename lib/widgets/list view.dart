@@ -66,9 +66,9 @@ Widget buildListItem(BuildContext context, int index, int categoryIndex) {
 
 Widget buildListItem1(BuildContext context, int index) {
   Movie m = comingSoon[index];
-  return SizedBox(
-    width: 400,
-    height: 600,
+  return Container(
+    width: 300,
+    height: 300,
     child: Card(
       elevation: 12,
       child: ClipRRect(
@@ -78,8 +78,8 @@ Widget buildListItem1(BuildContext context, int index) {
             Image.asset(
               m.poster,
               fit: BoxFit.cover,
-              width: 300,
-              height: 360,
+              width: 250,
+              height: 380,
             ),
             const SizedBox(
               height: 10,

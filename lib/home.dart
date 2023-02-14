@@ -18,14 +18,15 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> with TickerProviderStateMixin {
   @override
   late TabController _tabController;
-  late TabController _tabController2;
+
+  // late TabController _tabController2;
   int categoryIndex = 0;
 
   @override
   void initState() {
-    _tabController = new TabController(length: 2, vsync: this);
-    _tabController2 = new TabController(length: 5, vsync: this);
     super.initState();
+    _tabController = new TabController(length: 2, vsync: this);
+    // _tabController2 = new TabController(length: 5, vsync: this);
   }
 
   @override
@@ -37,21 +38,26 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             title: const Center(
                 child: Text(
               "SWAM",
-              style: (TextStyle(color: Colors.grey)),
+              style: (TextStyle(
+                color: Colors.indigo,
+                fontWeight: FontWeight.w500,
+              )),
             )),
             bottom: TabBar(
               controller: _tabController,
-              indicatorColor: Colors.black,
+              indicatorColor: Colors.indigo,
               unselectedLabelColor: Colors.grey,
-              labelColor: Colors.black,
+              labelColor: Colors.indigo,
               tabs: const [
                 Tab(
                     child: Text(
                   "In theater",
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                 )),
                 Tab(
                     child: Text(
                   "Coming soon",
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                 ))
               ],
             ),
@@ -91,10 +97,11 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       flex: 6,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Container(
+                        child: SizedBox(
                           height: 200,
                           child: ScrollSnapList(
-                            itemBuilder: (context, index) => buildListItem(context,index,categoryIndex),
+                            itemBuilder: (context, index) =>
+                                buildListItem(context, index, categoryIndex),
                             itemCount: Movies[categoryIndex].length,
                             itemSize: 300,
                             onItemFocus: (index) {},
@@ -111,27 +118,31 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     )
                   ]),
                   Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-                    SizedBox(
-                      height: 25,
+                    Expanded(
+                      flex: 1,
+                      child: SizedBox(
+                        height: 25,
+                      ),
                     ),
-                    SizedBox(
-                      height: 15,
+                    Expanded(
+                      flex: 5,
+                      child: SizedBox(
+                        height: 200,
+                        child: ScrollSnapList(
+                          itemBuilder: buildListItem1,
+                          itemCount: comingSoon.length,
+                          itemSize: 300,
+                          onItemFocus: (index) {},
+                          dynamicItemSize: true,
+                        ),
+                      ),
                     ),
-                    SizedBox(
-                      height: 40,
+                    Expanded(
+                      flex: 1,
+                      child: SizedBox(
+                        height: 25,
+                      ),
                     ),
-                    Container(
-                        height: 500,
-                        child: SizedBox(
-                          height: 500,
-                          child: ScrollSnapList(
-                            itemBuilder: buildListItem1,
-                            itemCount: comingSoon.length,
-                            itemSize: 400,
-                            onItemFocus: (index) {},
-                            dynamicItemSize: true,
-                          ),
-                        ))
                   ]),
                 ]),
               ),

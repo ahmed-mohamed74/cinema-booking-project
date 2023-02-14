@@ -1,9 +1,15 @@
+import 'package:b_swam/models.dart';
 import 'package:b_swam/modules/choose_seat_page.dart';
 import 'package:flutter/material.dart';
 import 'package:b_swam/shared/componenets/components.dart';
 
+import '../constants.dart';
+import '../screens/details/components/genre.dart';
+
 class DateTimePage extends StatefulWidget {
-  const DateTimePage({Key? key}) : super(key: key);
+  final Movie movie;
+
+  const DateTimePage({Key? key, required this.movie}) : super(key: key);
 
   @override
   State<DateTimePage> createState() => _DateTimePageState();
@@ -68,30 +74,38 @@ class _DateTimePageState extends State<DateTimePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                ),
+                image: DecorationImage(
+                  fit: BoxFit.fill,
+                  //-------poster image--------
+                  image: AssetImage(
+                    "${widget.movie.poster}",
+                  ),
+                ),
+              ),
               height: 350,
               width: double.infinity,
-              child: Image.asset(
-                'assets/images/Tenet_Movie_Poster.jpeg',
-                fit: BoxFit.fitWidth,
-              ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20.0, top: 5),
               child: Row(
                 children: [
-                  const Text(
-                    'TENET',
+                  Text(
+                    '${widget.movie.title}',
                     style: TextStyle(
                         fontSize: 25,
                         letterSpacing: 2,
                         fontWeight: FontWeight.w500),
                   ),
-                  const Baseline(
-                    baseline: 17,
+                  Baseline(
+                    baseline: 25,
                     baselineType: TextBaseline.alphabetic,
                     child: Text(
-                      '(2020)',
+                      ' (${widget.movie.year})',
                       style: TextStyle(fontWeight: FontWeight.w300),
                     ),
                   ),
@@ -99,31 +113,16 @@ class _DateTimePageState extends State<DateTimePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20.0),
-              child: Row(
-                children: [
-                  OutlinedButton(
-                    onPressed: () {},
-                    child: const Text('Action'),
-                    style: ButtonStyle(
-                      minimumSize:
-                          MaterialStateProperty.all(const Size(20, 30)),
-                      foregroundColor: MaterialStateProperty.all(Colors.black),
-                    ),
-                  ),
-                  const SizedBox(width: 7),
-                  OutlinedButton(
-                    onPressed: () {},
-                    child: const Text('Drama'),
-                    style: ButtonStyle(
-                      minimumSize:
-                          MaterialStateProperty.all(const Size(20, 30)),
-                      foregroundColor: MaterialStateProperty.all(Colors.black),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+                padding: EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+                child: SizedBox(
+                  height: 34,
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: widget.movie.genra.length,
+                      itemBuilder: (context, index) => Genre(
+                            genre: "${widget.movie.genra[index]}",
+                          )),
+                )),
             Column(
               children: [
                 ToggleButtons(
