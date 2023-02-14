@@ -9,14 +9,14 @@ class Movie {
 
   Movie(
       {required this.id,
-      required this.year,
-      required this.numOfRating,
-      required this.rating,
-      required this.plote,
-      required this.poster,
-      required this.title,
-      required this.cast,
-      required this.genra});
+        required this.year,
+        required this.numOfRating,
+        required this.rating,
+        required this.plote,
+        required this.poster,
+        required this.title,
+        required this.cast,
+        required this.genra});
 }
 
 //movie data
@@ -26,7 +26,7 @@ List<Movie> Action = [
       title: "Confessions",
       year: 2010,
       plote:
-          "A paid assassin working for the biker gangs of Quebec outsmarts both the police and the underworld for decades, committing 28 hits over 25 years.",
+      "A paid assassin working for the biker gangs of Quebec outsmarts both the police and the underworld for decades, committing 28 hits over 25 years.",
       poster: "assets/images/Confessions.jpg",
       rating: 6.4,
       numOfRating: 462,
@@ -50,7 +50,69 @@ List<Movie> Action = [
           "orginalName": "Sandrine Bisson",
           "CharacterName": "Jocelyne Lacroix",
           "image":
-              "assets/images/Sandrine Bisson brille dans le film Confessions - Châtelaine.jpg",
+          "assets/images/Sandrine Bisson brille dans le film Confessions - Châtelaine.jpg",
+        },
+      ]),
+  Movie(
+      id: 10,
+      title: "Jung_E",
+      year: 2023,
+      plote:
+      "On an uninhabitable 22nd-century Earth, the outcome of a civil war hinges on cloning the brain of an elite soldier to create a robot mercenary.",
+      poster: "assets/images//jung_E.jpg",
+      rating: 5.4,
+      numOfRating: 7300,
+      genra: [
+        "Adventure",
+        "Drama",
+        "Action"
+      ],
+      cast: [
+        {
+          "orginalName": "Kang Soo-yeon",
+          "CharacterName": "Yun Seo-hyun",
+          "image": "assets/images/Kang Soo-yeon.jpg",
+        },
+        {
+          "orginalName": "Ryu Kyung-soo",
+          "CharacterName": "Kim Sang-Hoon",
+          "image": "assets/images/Ryu Kyung-soo.jpg ",
+        },
+        {
+          "orginalName": "Kim Hyun-joo",
+          "CharacterName": "Jung_E",
+          "image": "assets/images/Kim Hyun-joo.jpg",
+        },
+      ]),
+  Movie(
+      id: 11,
+      title: "Pathaan",
+      year: 2023,
+      plote:
+      "An Indian spy takes on the leader of a group of mercenaries who have nefarious plans to target his homeland.",
+      poster: "assets/images/Pathaan.jpg",
+      rating: 6.6,
+      numOfRating: 119000,
+      genra: [
+        "Adventure",
+        "Drama",
+        "Action"
+      ],
+      cast: [
+        {
+          "orginalName": "Shah Rukh Khan",
+          "CharacterName": "Pathaan",
+          "image": "assets/images/Shah Rukh Khan.jpg",
+        },
+        {
+          "orginalName": "Deepika Padukone",
+          "CharacterName": "Rubina Mohsin",
+          "image": "assets/images/Deepika Padukone.jpg ",
+        },
+        {
+          "orginalName": "John Abraham",
+          "CharacterName": "Jim",
+          "image": "assets/images/John Abraham.jpg",
         },
       ]),
 ];
@@ -60,7 +122,7 @@ List<Movie> Drama = [
       title: "Blueback",
       year: 2022,
       plote:
-          "In a dramatic setting, the work follows Abby's story, in which she and a blue fish develop a strong friendship, but when Abby discovers that her friend is in danger, she embarks on a big adventure to protect her.",
+      "In a dramatic setting, the work follows Abby's story, in which she and a blue fish develop a strong friendship, but when Abby discovers that her friend is in danger, she embarks on a big adventure to protect her.",
       poster: "assets/images/Blueback.jpg",
       rating: 6.1,
       numOfRating: 377,
@@ -90,7 +152,7 @@ List<Movie> Drama = [
       title: "Infiesto",
       year: 2023,
       plote:
-          "Two detectives are called to a small mining town in the Asturian mountains where a young woman who had been left for dead for months has suddenly appeared, leaving the detectives to question what dark forces are at work.",
+      "Two detectives are called to a small mining town in the Asturian mountains where a young woman who had been left for dead for months has suddenly appeared, leaving the detectives to question what dark forces are at work.",
       poster: "assets/images/Infiesto.jpg",
       rating: 5.6,
       numOfRating: 362,
@@ -121,7 +183,7 @@ List<Movie> Drama = [
       title: "Kompromat",
       year: 2022,
       plote:
-          "Based on incredible true events, Jérome Salle's gripping new espionage thriller depicts the remarkable story of a French public servant who unwittingly finds himself in conflict with one of the modern era's most powerful and dangerous forces: Russia's FSB. Gilles Lellouche stars as Mathieu, a gregarious and dedicated diplomat who accepts a posting to Irkutsk as the head of Siberia's Alliance Francaise. He hopes the change will be good for his family and struggling marriage, but before long Mathieu's staging of cultural events and support of artistic expression sees him fall afoul of local authorities. Accused of a terrible crime, he soon realises someone has fabricated a case with Russia's Federal Security Service - he has been framed. Arrested, imprisoned and isolated, Mathieu has nowhere to turn. Defending himself is impossible, the French authorities are helpless - it seems he has no choice: to try and escape.",
+      "Based on incredible true events, Jérome Salle's gripping new espionage thriller depicts the remarkable story of a French public servant who unwittingly finds himself in conflict with one of the modern era's most powerful and dangerous forces: Russia's FSB. Gilles Lellouche stars as Mathieu, a gregarious and dedicated diplomat who accepts a posting to Irkutsk as the head of Siberia's Alliance Francaise. He hopes the change will be good for his family and struggling marriage, but before long Mathieu's staging of cultural events and support of artistic expression sees him fall afoul of local authorities. Accused of a terrible crime, he soon realises someone has fabricated a case with Russia's Federal Security Service - he has been framed. Arrested, imprisoned and isolated, Mathieu has nowhere to turn. Defending himself is impossible, the French authorities are helpless - it seems he has no choice: to try and escape.",
       poster: "assets/images/Kompromat _ critique bons baisers de Russie.jpg",
       rating: 6.4,
       numOfRating: 4770,
@@ -144,7 +206,7 @@ List<Movie> Drama = [
           "orginalName": "Michael Gordon",
           "CharacterName": "Rostov",
           "image":
-              "assets/images/GJoseph Gordon-Levitt  discovered by Perrieeele.jpg",
+          "assets/images/GJoseph Gordon-Levitt  discovered by Perrieeele.jpg",
         },
       ]),
   Movie(
@@ -152,7 +214,7 @@ List<Movie> Drama = [
       title: "Confessions",
       year: 2010,
       plote:
-          "A paid assassin working for the biker gangs of Quebec outsmarts both the police and the underworld for decades, committing 28 hits over 25 years.",
+      "A paid assassin working for the biker gangs of Quebec outsmarts both the police and the underworld for decades, committing 28 hits over 25 years.",
       poster: "assets/images/Confessions.jpg",
       rating: 6.4,
       numOfRating: 462,
@@ -176,7 +238,7 @@ List<Movie> Drama = [
           "orginalName": "Sandrine Bisson",
           "CharacterName": "Jocelyne Lacroix",
           "image":
-              "assets/images/Sandrine Bisson brille dans le film Confessions - Châtelaine.jpg",
+          "assets/images/Sandrine Bisson brille dans le film Confessions - Châtelaine.jpg",
         },
       ]),
 ];
@@ -186,7 +248,7 @@ List<Movie> Crime = [
       title: "Beyond the Neon",
       year: 2022,
       plote:
-          "A dangerous social experiment performed by a reckless YouTuber and his film crew exposes human sex trafficking in Las Vegas.",
+      "A dangerous social experiment performed by a reckless YouTuber and his film crew exposes human sex trafficking in Las Vegas.",
       poster: "assets/images/Blueback.jpg",
       rating: 5.6,
       numOfRating: 4449,
@@ -217,7 +279,7 @@ List<Movie> Crime = [
       title: "Infiesto",
       year: 2023,
       plote:
-          "Two detectives are called to a small mining town in the Asturian mountains where a young woman who had been left for dead for months has suddenly appeared, leaving the detectives to question what dark forces are at work.",
+      "Two detectives are called to a small mining town in the Asturian mountains where a young woman who had been left for dead for months has suddenly appeared, leaving the detectives to question what dark forces are at work.",
       poster: "assets/images/Infiesto.jpg",
       rating: 5.6,
       numOfRating: 362,
@@ -248,7 +310,7 @@ List<Movie> Crime = [
       title: "Confessions",
       year: 2010,
       plote:
-          "A paid assassin working for the biker gangs of Quebec outsmarts both the police and the underworld for decades, committing 28 hits over 25 years.",
+      "A paid assassin working for the biker gangs of Quebec outsmarts both the police and the underworld for decades, committing 28 hits over 25 years.",
       poster: "assets/images/Confessions.jpg",
       rating: 6.4,
       numOfRating: 462,
@@ -272,7 +334,7 @@ List<Movie> Crime = [
           "orginalName": "Sandrine Bisson",
           "CharacterName": "Jocelyne Lacroix",
           "image":
-              "assets/images/Sandrine Bisson brille dans le film Confessions - Châtelaine.jpg",
+          "assets/images/Sandrine Bisson brille dans le film Confessions - Châtelaine.jpg",
         },
       ]),
 ];
@@ -282,7 +344,7 @@ List<Movie> Horror = [
       title: "fear",
       year: 2023,
       plote:
-          "A much needed getaway and a celebration weekend turns into a nightmare due to the contagious airborne threat.",
+      "A much needed getaway and a celebration weekend turns into a nightmare due to the contagious airborne threat.",
       poster: "assets/images/fear.jpg",
       rating: 3.5,
       numOfRating: 340,
@@ -311,7 +373,7 @@ List<Movie> Horror = [
       title: "M3GAN",
       year: 2022,
       plote:
-          "A robotics engineer at a toy company builds a life-like doll that begins to take on a life of its own.",
+      "A robotics engineer at a toy company builds a life-like doll that begins to take on a life of its own.",
       poster: "assets/images/M3GAN.jpg",
       rating: 6.4,
       numOfRating: 56000,
@@ -340,7 +402,7 @@ List<Movie> Horror = [
       title: "Smile",
       year: 2022,
       plote:
-          "After witnessing a bizarre, traumatic incident involving a patient, a psychiatrist becomes increasingly convinced she is being threatened by an uncanny entity.",
+      "After witnessing a bizarre, traumatic incident involving a patient, a psychiatrist becomes increasingly convinced she is being threatened by an uncanny entity.",
       poster: "assets/images/Smile.jpg",
       rating: 6.6,
       numOfRating: 102000,
@@ -371,7 +433,7 @@ List<Movie> Comedy = [
       title: "Lyle, Lyle, Crocodile",
       year: 2022,
       plote:
-          "Feature film based on the children's book about a crocodile that lives in New York City.",
+      "Feature film based on the children's book about a crocodile that lives in New York City.",
       poster: "assets/images/Lyle, Lyle, Crocodile.jpg",
       rating: 6.1,
       numOfRating: 7700,
@@ -402,7 +464,7 @@ List<Movie> Comedy = [
       title: "Matilda the Musical",
       year: 2022,
       plote:
-          "An adaptation of the Tony and Olivier award-winning musical. Matilda tells the story of an extraordinary girl who, armed with a sharp mind and a vivid imagination, dares to take a stand to change her story with miraculous results.",
+      "An adaptation of the Tony and Olivier award-winning musical. Matilda tells the story of an extraordinary girl who, armed with a sharp mind and a vivid imagination, dares to take a stand to change her story with miraculous results.",
       poster: "assets/images/Matilda the Musical.jpg",
       rating: 7.1,
       numOfRating: 19000,
@@ -433,7 +495,7 @@ List<Movie> Comedy = [
       title: "Luck",
       year: 2022,
       plote:
-          "The curtain is pulled back on the millennia-old battle between the organizations of good luck and bad luck that secretly affects everyday lives.",
+      "The curtain is pulled back on the millennia-old battle between the organizations of good luck and bad luck that secretly affects everyday lives.",
       poster: "assets/images/Luck.jpg",
       rating: 6.4,
       numOfRating: 21000,
@@ -814,7 +876,7 @@ List<Movie> comingSoon = [
       title: "Evil Dead Rise",
       year: 2023,
       plote:
-          "A twisted tale of two estranged sisters whose reunion is cut short by the rise of flesh-possessing demons, thrusting them into a primal battle for survival as they face the most nightmarish version of family imaginable.",
+      "A twisted tale of two estranged sisters whose reunion is cut short by the rise of flesh-possessing demons, thrusting them into a primal battle for survival as they face the most nightmarish version of family imaginable.",
       poster: "assets/images/Evil Dead Rise.jpg",
       rating: 0,
       numOfRating: 0,
@@ -843,7 +905,7 @@ List<Movie> comingSoon = [
       title: "Scream VI",
       year: 2023,
       plote:
-          "In the next installment, the survivors of the Ghostface killings leave Woodsboro behind and start a fresh chapter in New York City.",
+      "In the next installment, the survivors of the Ghostface killings leave Woodsboro behind and start a fresh chapter in New York City.",
       poster: "assets/images/Scream VI.jpg",
       rating: 0,
       numOfRating: 0,
@@ -872,7 +934,7 @@ List<Movie> comingSoon = [
       title: "Killers of the Flower Moon",
       year: 2023,
       plote:
-          "Members of the Osage tribe in the United States are murdered under mysterious circumstances in the 1920s sparking a major F.B.I. investigation involving J. Edgar Hoover.",
+      "Members of the Osage tribe in the United States are murdered under mysterious circumstances in the 1920s sparking a major F.B.I. investigation involving J. Edgar Hoover.",
       poster: "assets/images/Killers of the Flower Moon.jpg",
       rating: 0,
       numOfRating: 0,
@@ -903,8 +965,8 @@ List<Movie> comingSoon = [
       title: "John Wick: Chapter 4",
       year: 2023,
       plote:
-          "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
-      poster: "assets/images/John Wick.jpg",
+      "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+      poster: "assets/images/John Wick.jfif",
       rating: 0,
       numOfRating: 0,
       genra: [
@@ -927,6 +989,37 @@ List<Movie> comingSoon = [
           "orginalName": "Bill Skarsgård",
           "CharacterName": "Marquis",
           "image": "assets/images/Bill Skarsgård.jpg",
+        },
+      ]),
+  Movie(
+      id: 61,
+      title: "The Covenant",
+      year: 2023,
+      plote:
+      "Follows Sergeant John, who on his last tour of duty in Afghanistan is teamed with local interpreter Ahmed, who risks his own life to carry an injured John across miles of grueling terrain to safety.",
+      poster: "assets/images/The Covenant.jpg",
+      rating: 0,
+      numOfRating: 0,
+      genra: [
+        "Thriller",
+        "Crime",
+        "Action"
+      ],
+      cast: [
+        {
+          "orginalName": "Jake Gyllenhaal",
+          "CharacterName": "Sergeant John Kinley",
+          "image": "assets/images/Jake Gyllenhaal.jpg",
+        },
+        {
+          "orginalName": "Jonny Lee Miller",
+          "CharacterName": "Vokes",
+          "image": "assets/images/Jonny Lee Miller.jpg ",
+        },
+        {
+          "orginalName": "Dar Salim",
+          "CharacterName": "Ahmed",
+          "image": "assets/images/Dar Salim.jfif",
         },
       ]),
 ];

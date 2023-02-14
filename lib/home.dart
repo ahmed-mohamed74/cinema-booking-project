@@ -37,7 +37,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             title: const Center(
                 child: Text(
               "SWAM",
-              style: (TextStyle(color: Colors.indigo)),
+              style: (TextStyle(color: Colors.grey)),
             )),
             bottom: TabBar(
               controller: _tabController,
@@ -91,11 +91,10 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       flex: 6,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: SizedBox(
+                        child: Container(
                           height: 200,
                           child: ScrollSnapList(
-                            itemBuilder: (context, index) =>
-                                buildListItem(context, index, categoryIndex),
+                            itemBuilder: (context, index) => buildListItem(context,index,categoryIndex),
                             itemCount: Movies[categoryIndex].length,
                             itemSize: 300,
                             onItemFocus: (index) {},
