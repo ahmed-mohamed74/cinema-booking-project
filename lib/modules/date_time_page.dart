@@ -134,11 +134,11 @@ class _DateTimePageState extends State<DateTimePage> {
                     });
                   },
                   borderRadius: const BorderRadius.all(Radius.circular(18)),
-                  selectedBorderColor: Colors.lightBlueAccent,
-                  selectedColor: Colors.black,
+                  selectedBorderColor: Colors.indigo,
+                  selectedColor: Colors.white,
                   textStyle: const TextStyle(
                       fontWeight: FontWeight.w500, fontSize: 15),
-                  fillColor: Colors.lightBlueAccent,
+                  fillColor: Colors.indigo,
                   color: Colors.black54,
                   constraints: const BoxConstraints(
                     minHeight: 35.0,
@@ -165,7 +165,7 @@ class _DateTimePageState extends State<DateTimePage> {
                           ElevatedButton(
                             style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
-                                  Colors.lightBlueAccent,
+                                  Colors.indigo,
                                 ),
                                 fixedSize: MaterialStateProperty.all(
                                   const Size(250, 52),
@@ -220,7 +220,7 @@ class _DateTimePageState extends State<DateTimePage> {
                                           decoration: BoxDecoration(
                                             border: Border.all(
                                               color: selectedCard == index
-                                                  ? Colors.blue
+                                                  ? Colors.indigo
                                                   : Colors.black,
                                               width:
                                                   selectedCard == index ? 3 : 1,
@@ -270,7 +270,7 @@ class _DateTimePageState extends State<DateTimePage> {
                                           decoration: BoxDecoration(
                                             border: Border.all(
                                               color: selectedCinema == index
-                                                  ? Colors.blue
+                                                  ? Colors.indigo
                                                   : Colors.black,
                                               width: selectedCinema == index
                                                   ? 3

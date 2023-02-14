@@ -9,7 +9,8 @@ import 'package:scroll_snap_list/scroll_snap_list.dart';
 import 'models.dart';
 
 class Home extends StatefulWidget {
-  // const Home({required Key key}) : super(key: key);
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -17,8 +18,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> with TickerProviderStateMixin {
   @override
   late TabController _tabController;
-
   late TabController _tabController2;
+  int categoryIndex = 0;
 
   @override
   void initState() {
@@ -62,44 +63,30 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                 child: TabBarView(controller: _tabController, children: [
                   Column(children: [
                     Expanded(
-                      child: ListView.separated(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 8,
-                        itemBuilder: (context, index) => Row(
-                          children: [
-                            Btn("Action"),
-                          ],
-                        ),
-                        separatorBuilder: (BuildContext context, int index) =>
-                            SizedBox(
-                          width: 5,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListView.separated(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: Movies.length,
+                          itemBuilder: (context, index) => Row(
+                            children: [
+                              Btn(
+                                  "${index == 0 ? 'Action' : index == 1 ? 'Drama' : index == 2 ? 'Crime' : index == 3 ? 'Horror' : 'Comedy'}",
+                                  () {
+                                setState(() {
+                                  categoryIndex = index;
+                                });
+                              }),
+                            ],
+                          ),
+                          separatorBuilder: (BuildContext context, int index) =>
+                              SizedBox(
+                            width: 5,
+                          ),
                         ),
                       ),
                       flex: 1,
                     ),
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.center,
-                    //   crossAxisAlignment: CrossAxisAlignment.start,
-                    //   children: [
-                    //     Btn("Action"),
-                    //     SizedBox(
-                    //       width: 5,
-                    //     ),
-                    //     Btn("Crime"),
-                    //     SizedBox(
-                    //       width: 5,
-                    //     ),
-                    //     Btn("Comedy"),
-                    //     SizedBox(
-                    //       width: 5,
-                    //     ),
-                    //     Btn("Drama"),
-                    //     SizedBox(
-                    //       width: 5,
-                    //     ),
-                    //     Btn("Horror"),
-                    //   ],
-                    // ),
                     Expanded(
                       flex: 6,
                       child: Padding(
@@ -107,8 +94,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                         child: Container(
                           height: 200,
                           child: ScrollSnapList(
-                            itemBuilder: buildListItem,
-                            itemCount: Movies.length,
+                            itemBuilder: (context, index) => buildListItem(context,index,categoryIndex),
+                            itemCount: Movies[categoryIndex].length,
                             itemSize: 300,
                             onItemFocus: (index) {},
                             dynamicItemSize: true,
@@ -127,35 +114,24 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     SizedBox(
                       height: 25,
                     ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
                     Container(
-                      height: 550,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [
-                          Card1("Smile"),
-                          SizedBox(
-                            width: 15,
+                        height: 500,
+                        child: SizedBox(
+                          height: 500,
+                          child: ScrollSnapList(
+                            itemBuilder: buildListItem1,
+                            itemCount: comingSoon.length,
+                            itemSize: 400,
+                            onItemFocus: (index) {},
+                            dynamicItemSize: true,
                           ),
-                          Card1("Smile"),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card1("Smile"),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card1("Smile"),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card1("Smile"),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card1("Smile"),
-                        ],
-                      ),
-                    )
+                        ))
                   ]),
                 ]),
               ),
