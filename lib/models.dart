@@ -416,33 +416,7 @@ List<Movie>Comedy=[Movie(
 List<Movie> Movies =[
   //1 action
 
-  Movie(
-      id: 33,
-      title: "Confessions",
-      year: 2010,
-      plote: "A paid assassin working for the biker gangs of Quebec outsmarts both the police and the underworld for decades, committing 28 hits over 25 years.",
-      poster: "assets/images/Confessions.jpg",
-      rating: 6.4,
-      numOfRating:462 ,
-      genra: [ "Crime" , "Drama" , "Action" ],
-      cast: [
-        {
-          "orginalName": "Luc Picard",
-          "CharacterName": "Gerald Gallant",
-          "image": "assets/images/Jean-Luc Picard.jpg",
-        },
-        {
-          "orginalName": "David La Haye",
-          "CharacterName": "Donald'Dolly'",
-          "image": " ",
-        },
-        {
-          "orginalName": "Sandrine Bisson",
-          "CharacterName": "Jocelyne Lacroix",
-          "image": "assets/images/Sandrine Bisson brille dans le film Confessions - Châtelaine.jpg",
-        },
-      ]
-  ),
+
 
   //2 drama
   Movie(
@@ -563,7 +537,7 @@ List<Movie> Movies =[
       title: "Beyond the Neon",
       year: 2022,
       plote: "A dangerous social experiment performed by a reckless YouTuber and his film crew exposes human sex trafficking in Las Vegas.",
-      poster: "assets/images/Confessions.jpg",
+      poster: "assets/images/beyond the neon.jpg",
       rating: 5.6,
       numOfRating:4449 ,
       genra: [ "Crime" , "Mystery", "Thriller" ],
@@ -586,61 +560,9 @@ List<Movie> Movies =[
       ]
   ),
 
-  Movie(
-      id: 32,
-      title: "Infiesto",
-      year: 2023,
-      plote: "Two detectives are called to a small mining town in the Asturian mountains where a young woman who had been left for dead for months has suddenly appeared, leaving the detectives to question what dark forces are at work.",
-      poster: "assets/images/Infiesto.jpg",
-      rating: 5.6,
-      numOfRating: 362 ,
-      genra: [ "Drama" , "Crime" , "Thriller" ],
-      cast: [
-        {
-          "orginalName": "Ana Villa",
-          "CharacterName": "Julia",
-          "image": " ",
-        },
-        {
-          "orginalName": "Iria del Rio",
-          "CharacterName": "sub-Inspectora Castro",
-          "image": "assets/images/Iria del Rio.jpg",
-        },
-        {
-          "orginalName": "Isabel Naveira",
-          "CharacterName": "Paz Nogueira",
-          "image": "assets/images/Isabel Naveira.jpg",
-        },
-      ]
-  ),
 
-  Movie(
-      id: 33,
-      title: "Confessions",
-      year: 2010,
-      plote: "A paid assassin working for the biker gangs of Quebec outsmarts both the police and the underworld for decades, committing 28 hits over 25 years.",
-      poster: "assets/images/Confessions.jpg",
-      rating: 6.4,
-      numOfRating:462 ,
-      genra: [ "Crime" , "Drama" , "Action" ],
-      cast: [
-        {
-          "orginalName": "Luc Picard",
-          "CharacterName": "Gerald Gallant",
-          "image": "assets/images/Jean-Luc Picard.jpg",
-        },
-        {
-          "orginalName": "David La Haye",
-          "CharacterName": "Donald'Dolly'",
-          "image": " ",
-        },
-        {
-          "orginalName": "Sandrine Bisson",
-          "CharacterName": "Jocelyne Lacroix",
-          "image": "assets/images/Sandrine Bisson brille dans le film Confessions - Châtelaine.jpg",
-        },
-      ]
-  ),
+
+
 
   //4 horror
   Movie(
@@ -811,6 +733,9 @@ List<Movie> Movies =[
 
 
 //coming soon
+
+];
+List <Movie> comingSoon=[
   Movie(
       id: 42,
       title: "Evil Dead Rise",
