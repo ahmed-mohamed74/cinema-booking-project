@@ -1,23 +1,10 @@
 import 'package:b_swam/screens/details/screen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:scroll_snap_list/scroll_snap_list.dart';
-
 import '../models.dart';
 
-/*SizedBox(
-          height: 250,
-          child: ScrollSnapList(
-            itemBuilder: _buildListItem,
-            itemCount: Movies.length,
-            itemSize: 150,
-            onItemFocus: (index) {},
-            dynamicItemSize: true,
-          ),
-        ));
-  }*/
-Widget buildListItem(BuildContext context, int index) {
-  Movie movie = Movies[index];
+Widget buildListItem(BuildContext context, int index, int categoryIndex) {
+  Movie movie = Movies[categoryIndex][index];
   return InkWell(
     onTap: () => Navigator.of(context).push(
       MaterialPageRoute(
