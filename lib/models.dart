@@ -59,7 +59,7 @@ List<Movie> Action = [
       year: 2023,
       plote:
       "On an uninhabitable 22nd-century Earth, the outcome of a civil war hinges on cloning the brain of an elite soldier to create a robot mercenary.",
-      poster: "assets/images/Jung_E.jpg",
+      poster: "assets/images//jung_E.jpg",
       rating: 5.4,
       numOfRating: 7300,
       genra: [
@@ -76,7 +76,7 @@ List<Movie> Action = [
         {
           "orginalName": "Ryu Kyung-soo",
           "CharacterName": "Kim Sang-Hoon",
-          "image": "assets/images/LRyu Kyung-soo.jpg ",
+          "image": "assets/images/Ryu Kyung-soo.jpg ",
         },
         {
           "orginalName": "Kim Hyun-joo",
@@ -966,7 +966,7 @@ List<Movie> comingSoon = [
       year: 2023,
       plote:
       "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
-      poster: "assets/images/John Wick.jpg",
+      poster: "assets/images/John Wick.jfif",
       rating: 0,
       numOfRating: 0,
       genra: [
