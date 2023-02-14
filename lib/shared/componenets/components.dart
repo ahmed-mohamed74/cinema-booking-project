@@ -4,7 +4,7 @@ Widget defaultElevatedButton(function, text) {
   return ElevatedButton(
     style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(
-          Colors.lightBlueAccent,
+          Colors.indigo,
         ),
         fixedSize: MaterialStateProperty.all(
           const Size(250, 52),

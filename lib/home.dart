@@ -127,35 +127,21 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     SizedBox(
                       height: 25,
                     ),
+                    SizedBox(height: 15,),
+
+                    SizedBox(height: 40,),
                     Container(
-                      height: 550,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [
-                          Card1("Smile"),
-                          SizedBox(
-                            width: 15,
+                        height: 500,
+                        child:  SizedBox(
+                          height: 500,
+                          child: ScrollSnapList(
+                            itemBuilder: buildListItem1,
+                            itemCount: comingSoon.length,
+                            itemSize: 400,
+                            onItemFocus: (index) {},
+                            dynamicItemSize: true,
                           ),
-                          Card1("Smile"),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card1("Smile"),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card1("Smile"),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card1("Smile"),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Card1("Smile"),
-                        ],
-                      ),
-                    )
+                        ))
                   ]),
                 ]),
               ),
