@@ -790,5 +790,60 @@ List <Movie> comingSoon=[
         },
       ]
   ),
+  Movie(
+      id: 63,
+      title: "Killers of the Flower Moon",
+      year: 2023,
+      plote: "Members of the Osage tribe in the United States are murdered under mysterious circumstances in the 1920s sparking a major F.B.I. investigation involving J. Edgar Hoover.",
+      poster: "assets/images/Killers of the Flower Moon.jpg",
+      rating: 0,
+      numOfRating:0 ,
+      genra: [ "Action","Drama" ,"Crime", ],
+      cast: [
+        {
+          "orginalName": "Leonardo DiCaprio",
+          "CharacterName": "Ernest Burkhart",
+          "image": "assets/images/Leonardo DiCaprio.jpg",
+        },
+        {
+          "orginalName": "Robert De Niro",
+          "CharacterName": "William Hale",
+          "image": "assets/images/Robert De Niro.jpg",
+        },
+        {
+          "orginalName": "Lily Gladstone",
+          "CharacterName": "Mollie Burkhart",
+          "image": "assets/images/Lily Gladstone.jpg",
+        },
+      ]
+  ),
+  Movie(
+      id: 62,
+      title: "John Wick: Chapter 4",
+      year: 2023,
+      plote: "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+      poster: "assets/images/John Wick.jpg",
+      rating: 0,
+      numOfRating:0 ,
+      genra: [ "Action","Thriller" ,"Crime", ],
+      cast: [
+        {
+          "orginalName": "Keanu Reeves",
+          "CharacterName": "John Wick",
+          "image": "assets/images/Keanu Reeves.jpg",
+        },
+        {
+          "orginalName": "Donnie Yen",
+          "CharacterName": "Caine",
+          "image": "assets/images/Donnie Yen.jpg",
+        },
+        {
+          "orginalName": "Bill Skarsgård",
+          "CharacterName": "Marquis",
+          "image": "assets/images/Bill Skarsgård.jpg",
+        },
+      ]
+  ),
+
 ];
 
