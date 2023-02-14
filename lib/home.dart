@@ -36,9 +36,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
           appBar: AppBar(
             title: const Center(
                 child: Text(
-              "SWAM",
-              style: (TextStyle(color: Colors.grey)),
-            )),
+                  "SWAM",
+                  style: (TextStyle(color: Colors.grey)),
+                )),
             bottom: TabBar(
               controller: _tabController,
               indicatorColor: Colors.black,
@@ -47,12 +47,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               tabs: const [
                 Tab(
                     child: Text(
-                  "In theater",
-                )),
+                      "In theater",
+                    )),
                 Tab(
                     child: Text(
-                  "Coming soon",
-                ))
+                      "Coming soon",
+                    ))
               ],
             ),
             backgroundColor: Colors.white,
@@ -72,17 +72,17 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                             children: [
                               Btn(
                                   "${index == 0 ? 'Action' : index == 1 ? 'Drama' : index == 2 ? 'Crime' : index == 3 ? 'Horror' : 'Comedy'}",
-                                  () {
-                                setState(() {
-                                  categoryIndex = index;
-                                });
-                              }),
+                                      () {
+                                    setState(() {
+                                      categoryIndex = index;
+                                    });
+                                  }),
                             ],
                           ),
                           separatorBuilder: (BuildContext context, int index) =>
                               SizedBox(
-                            width: 5,
-                          ),
+                                width: 5,
+                              ),
                         ),
                       ),
                       flex: 1,
