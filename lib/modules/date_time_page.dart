@@ -1,4 +1,5 @@
 import 'package:b_swam/models.dart';
+import 'package:b_swam/modules/Booking_Page.dart';
 import 'package:b_swam/modules/choose_seat_page.dart';
 import 'package:flutter/material.dart';
 import 'package:b_swam/shared/componenets/components.dart';
@@ -286,7 +287,7 @@ class _DateTimePageState extends State<DateTimePage> {
                               defaultElevatedButton(() {
                                 Navigator.push(context,
                                     MaterialPageRoute(builder: (context) {
-                                  return ChooseSeatPage();
+                                  return BookingPage();
                                 }));
                               }, 'CHOOSE CINEMA'),
                             ],
