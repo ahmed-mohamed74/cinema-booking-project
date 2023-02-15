@@ -1,7 +1,7 @@
 import 'package:b_swam/home.dart';
-import 'package:b_swam/models.dart';
-import 'package:b_swam/screens/details/screen.dart';
+import 'package:b_swam/modules/Onboarding%20Screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +15,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
-      ),
-      home: Home(),
-      // Screen(
-      //   movie: Movies[4],
-      // ),
+          primarySwatch: Colors.indigo,
+          primaryColor: Colors.indigo,
+          scaffoldBackgroundColor: Colors.white,
+          appBarTheme: const AppBarTheme(
+            systemOverlayStyle: SystemUiOverlayStyle(
+              statusBarColor: Colors.transparent,
+              statusBarIconBrightness: Brightness.light,
+            ),
+          )),
+      home: OnboardingScreen(),
     );
   }
 }

@@ -19,21 +19,22 @@ class Screen extends StatelessWidget {
       children: [
         //poster and rating
         Container(
-          height: 400,
+          height: 500,
           color: Colors.white,
           child: Stack(
             children: [
               //poster
               Container(
-                height: 360,
+                height: 460,
                 decoration: BoxDecoration(
-                  borderRadius:
-                      BorderRadius.only(bottomLeft: Radius.circular(50)),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                  ),
                   image: DecorationImage(
                     fit: BoxFit.fill,
                     //-------poster image--------
                     image: AssetImage(
-                      "assets/images/Confessions.jpg",
+                      "${movie.poster}",
                     ),
                   ),
                 ),
@@ -79,7 +80,7 @@ class Screen extends StatelessWidget {
                                 children: [
                                   TextSpan(
                                     //----------movie ratinggg----------
-                                    text: "8.2/",
+                                    text: "${movie.rating}/",
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.w600,
@@ -87,7 +88,7 @@ class Screen extends StatelessWidget {
                                   ),
                                   TextSpan(text: "10\n"),
                                   TextSpan(
-                                    text: "150,212",
+                                    text: "IMDB",
                                     style: TextStyle(color: kTextLightColor),
                                   ),
                                 ],
@@ -116,7 +117,7 @@ class Screen extends StatelessWidget {
                               ),
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => DateTimePage()));
+                                    builder: (context) => DateTimePage(movie: movie)));
                               },
                               child: Icon(
                                 Icons.add,
@@ -146,32 +147,22 @@ class Screen extends StatelessWidget {
                     children: [
                       //*****title of movie********
                       Text(
-                        "confessjgy",
+                        "${movie.title}",
                         style: TextStyle(
-                          fontWeight: FontWeight.w100,
-                          fontSize: 30,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 25,
                           color: kTextColor,
                           decoration: TextDecoration.none,
+                          letterSpacing: 2,
                         ),
                       ),
                       SizedBox(height: kDefaultPadding / 2),
                       Row(
                         children: [
                           //**** movie year*****
-                          Text("2020",
+                          Text("${movie.year}",
                               style: TextStyle(
-                                fontWeight: FontWeight.w300,
-                                fontSize: 15,
-                                color: kTextLightColor,
-                                decoration: TextDecoration.none,
-                              )),
-                          SizedBox(
-                            width: kDefaultPadding,
-                          ),
-                          //*****PG*******
-                          Text("PG-21",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w300,
+                                fontWeight: FontWeight.w400,
                                 fontSize: 15,
                                 color: kTextLightColor,
                                 decoration: TextDecoration.none,
@@ -180,7 +171,7 @@ class Screen extends StatelessWidget {
                             width: kDefaultPadding,
                           ),
                           //*****hours*******
-                          Text("2h 32min",
+                          Text("2h:32min",
                               style: TextStyle(
                                 fontWeight: FontWeight.w300,
                                 fontSize: 15,
@@ -201,15 +192,12 @@ class Screen extends StatelessWidget {
                         height: 36,
                         child: ListView.builder(
                             scrollDirection: Axis.horizontal,
-                            //---movie.genra.length-----
-                            itemCount: 3,
+                            itemCount: movie.genra.length,
                             itemBuilder: (context, index) => Genre(
-                                  genre: "darama",
-                                  //genre: movie.genra[index],
+                                  genre: "${movie.genra[index]}",
                                 )),
                       ),
                     )),
-
                 // ----plot summary----
                 Padding(
                   padding: EdgeInsets.symmetric(
@@ -217,7 +205,7 @@ class Screen extends StatelessWidget {
                     horizontal: kDefaultPadding,
                   ),
                   child: Text(
-                    "Plot Summar",
+                    "Plot & Summary",
                     style: TextStyle(
                       fontWeight: FontWeight.w100,
                       fontSize: 30,
@@ -230,21 +218,17 @@ class Screen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                     horizontal: kDefaultPadding,
                   ),
-
                   //------- movie plot -----
                   child: Text(
-                    "Two detectives are called to a small mining town in the Asturian mountains where a young woman who had been left for dead for months has suddenly appeared, leaving the detectives to question what dark forces are at work.",
+                    "${movie.plote}",
                     style: TextStyle(
-                      fontWeight: FontWeight.w100,
+                      fontWeight: FontWeight.w300,
                       fontSize: 15,
                       color: Color(0xFF737599),
                       decoration: TextDecoration.none,
                     ),
                   ),
                 ),
-
-                //----Cast-----
-                // CastAndCrew(casts: movie.cast)
                 Padding(
                   padding: EdgeInsets.all(kDefaultPadding),
                   child: Column(
@@ -259,9 +243,7 @@ class Screen extends StatelessWidget {
                           decoration: TextDecoration.none,
                         ),
                       ),
-                      SizedBox(
-                        height: kDefaultPadding,
-                      ),
+                      SizedBox(height: kDefaultPadding),
                       SizedBox(
                         height: 160,
                         child: ListView.builder(

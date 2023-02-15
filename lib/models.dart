@@ -59,7 +59,7 @@ List<Movie> Action = [
       year: 2023,
       plote:
       "On an uninhabitable 22nd-century Earth, the outcome of a civil war hinges on cloning the brain of an elite soldier to create a robot mercenary.",
-      poster: "assets/images//jung_E.jpg",
+      poster: "assets/images/Jung_E.jpg",
       rating: 5.4,
       numOfRating: 7300,
       genra: [
@@ -341,7 +341,7 @@ List<Movie> Crime = [
 List<Movie> Horror = [
   Movie(
       id: 41,
-      title: "fear",
+      title: "Fear",
       year: 2023,
       plote:
       "A much needed getaway and a celebration weekend turns into a nightmare due to the contagious airborne threat.",
@@ -465,7 +465,7 @@ List<Movie> Comedy = [
       year: 2022,
       plote:
       "An adaptation of the Tony and Olivier award-winning musical. Matilda tells the story of an extraordinary girl who, armed with a sharp mind and a vivid imagination, dares to take a stand to change her story with miraculous results.",
-      poster: "assets/images/Matilda the Musical.jpg",
+      poster: "assets/images/Matilda The Musical.jpg",
       rating: 7.1,
       numOfRating: 19000,
       genra: [
@@ -935,7 +935,7 @@ List<Movie> comingSoon = [
       year: 2023,
       plote:
       "Members of the Osage tribe in the United States are murdered under mysterious circumstances in the 1920s sparking a major F.B.I. investigation involving J. Edgar Hoover.",
-      poster: "assets/images/Killers of the Flower Moon.jpg",
+      poster: "assets/images/killers of the flower moon.jpg",
       rating: 0,
       numOfRating: 0,
       genra: [
@@ -997,7 +997,7 @@ List<Movie> comingSoon = [
       year: 2023,
       plote:
       "Follows Sergeant John, who on his last tour of duty in Afghanistan is teamed with local interpreter Ahmed, who risks his own life to carry an injured John across miles of grueling terrain to safety.",
-      poster: "assets/images/The Covenant.jpg",
+      poster: "assets/images/the covenant.jpg",
       rating: 0,
       numOfRating: 0,
       genra: [
@@ -1023,3 +1023,4 @@ List<Movie> comingSoon = [
         },
       ]),
 ];
+String userName='Mohammed ossama';
