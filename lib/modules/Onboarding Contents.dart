@@ -13,7 +13,7 @@ class OnboardingContents {
 List<OnboardingContents> contents = [
   OnboardingContents(
     title: "Easy payment method",
-    image: "assets/images/image1.jpg",
+    image: "assets/images/image1.png",
     desc: "Safe and easy way to pay you don't have to go back if you forget your walletッ.",
   ),
   OnboardingContents(

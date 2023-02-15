@@ -69,8 +69,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: Column(
                       children: [
                         Image.asset(
-                          'assets/images/image1.jpg',
-                          height: 100,
+                          contents[i].image,
+                          height: SizeConfig.blockV! * 35,
                         ),
                         SizedBox(
                           height: (height >= 840) ? 60 : 30,

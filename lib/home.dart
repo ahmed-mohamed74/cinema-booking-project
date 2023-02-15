@@ -35,14 +35,15 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            title: const Center(
-                child: Text(
+            centerTitle: true,
+            title: Text(
               "SWAM",
               style: (TextStyle(
+                fontSize: 25,
                 color: Colors.indigo,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
               )),
-            )),
+            ),
             bottom: TabBar(
               controller: _tabController,
               indicatorColor: Colors.indigo,
